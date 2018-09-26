@@ -6,13 +6,8 @@ spring:
     driverClassName: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: none
     properties:
       jdbc:
         lob:
           non_contsxtual_creation: true
-
-    show-sql: true
-
-logging:
-  level: debug
