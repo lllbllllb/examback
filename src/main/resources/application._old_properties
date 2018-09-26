@@ -1,8 +1,10 @@
 #spring.datasource.url=jdbc:postgresql://localhost:5432/exam
-  #datasource configured in DatabaseConfig and
-#spring.datasource.driverClassName=org.postgresql.Driver
-#spring.datasource.username=postgres
-#spring.datasource.password=postgres
+spring.datasource.url=postgres://vtzmytfyhvnelz:cdc386a2dd9efd07ea5a80f4b613848cabc7acb75c9619036334230c25327a04@ec2-54-217-250-0.eu-west-1.compute.amazonaws.com:5432/dcldtle74uqrpt
+spring.datasource.driverClassName=org.postgresql.Driver
+spring.datasource.username=postgres
+spring.datasource.password=postgres
+
+spring.jpa.hibernate.ddl-auto=none
 
 # https://stackoverflow.com/a/49261146/6351976
 spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
@@ -17,7 +19,7 @@ logging.level.org.hibernate.SQL=debug
 logging.level.org.hibernate.type.descriptor.sql=trace
 
 #for heroku
-spring.datasource.driverClassName=org.postgresql.Driver
+#spring.datasource.driverClassName=org.postgresql.Driver
 spring.datasource.maxActive=10
 spring.datasource.maxIdle=5
 spring.datasource.minIdle=2
