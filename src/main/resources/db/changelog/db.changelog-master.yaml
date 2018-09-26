@@ -1,0 +1,22 @@
+databaseChangeLog:
+- changeSet:
+    id: 1
+    author: mbllllb
+    changes:
+    - sqlFile:
+        dbms: postgresql
+        encoding: utf8
+        path: db/20180914_2147_create_APP_USER.sql
+        splitStatements: true
+        stripComments: true
+    sqlFile:
+- changeSet:
+    id: 2
+    author: marceloverdijk
+    changes:
+    - sqlFile:
+        dbms: postgresql
+        encoding: utf8
+        path: db/20180915_0001_fill_APP_USER.sql
+        splitStatements: true
+        stripComments: true
