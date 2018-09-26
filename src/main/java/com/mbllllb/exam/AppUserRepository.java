@@ -8,9 +8,9 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 @RepositoryRestResource(collectionResourceRel = "user", path = "user")
 public interface AppUserRepository extends PagingAndSortingRepository<AppUser, Long> {
 
-    @Query("SELECT u FROM AppUser u WHERE u.alias=:key")
+    @Query("SELECT u FROM AppUser u WHERE u.alias=:key OR u.apikey=:key")
     AppUser findByKey(@Param("key") String key);
 
-    @Query("SELECT count(u) FROM AppUser u WHERE u.alias=:key")
+    @Query("SELECT count(u) FROM AppUser u WHERE u.alias=:key OR u.apikey=:key")
     int exist(@Param("key") String key);
 }
